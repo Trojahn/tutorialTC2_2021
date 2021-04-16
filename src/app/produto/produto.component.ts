@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from '../Produto';
+import {listaProdutosCadastrados} from "../listaProdutos";
 
 @Component({
   selector: 'app-produto',
@@ -8,11 +9,8 @@ import { Produto } from '../Produto';
 })
 export class ProdutoComponent implements OnInit {
 
-  produto : Produto = {
-    name: "Shampoo Vegan Max",
-    price: 2525.35,
-    vegan: true
-  }
+  listaProdutos : Produto[]  = listaProdutosCadastrados;
+  
 
 
   constructor() { }
