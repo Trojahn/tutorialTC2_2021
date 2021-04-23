@@ -1,0 +1,11 @@
+<div *ngIf="produto">
+    <h2>Detalhes do produto</h2>
+    <label>Nome:
+        <input type="text" [(ngModel)]="produto.name" placeholder="Nome do produto">
+    </label>
+    <br>
+    <label>Preço:
+        <input type="number" [(ngModel)]="produto.price" placeholder="Preço do produto" min="0.0"
+            step="0.01">
+    </label>
+</div>
