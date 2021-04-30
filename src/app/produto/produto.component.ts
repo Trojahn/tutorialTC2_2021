@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../database.service';
 import { Produto } from '../Produto';
-import { listaProdutosCadastrados } from '../listaProdutos';
 
 @Component({
   selector: 'app-produto',
@@ -8,14 +8,20 @@ import { listaProdutosCadastrados } from '../listaProdutos';
   styleUrls: ['./produto.component.css'],
 })
 export class ProdutoComponent implements OnInit {
-  listaProdutos: Produto[] = listaProdutosCadastrados;
+  listaProdutos: Produto[];
   produtoSelecionado : Produto;
 
   selecionaProduto(produto: Produto): void {
     this.produtoSelecionado = produto;
   }
 
-  constructor() {}
+  carregarProdutos() : void {
+    this.listaProdutos = this.servico.getProdutos();
+  }
 
-  ngOnInit(): void {}
+  constructor(private servico : DatabaseService) {}
+
+  ngOnInit(): void {
+    this.carregarProdutos();
+  }
 }
