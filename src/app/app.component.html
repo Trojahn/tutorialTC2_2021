@@ -1,9 +1,11 @@
 <header>
   <h1>Bem vindo ao {{title}}</h1>
 </header>
+<nav>
+  <a routerLink="/produtos">Lista de produtos</a>
+</nav>
 <main>
-  <app-produto></app-produto>
-  <app-cadastrar></app-cadastrar>
+  <router-outlet></router-outlet>
 </main>
 <footer>
   <h4>Desenvolvido por {{developer}}</h4>

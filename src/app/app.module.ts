@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PromocaoComponent } from './promocao/promocao.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdutoComponent,
     ProdutoDetalhesComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    PromocaoComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
